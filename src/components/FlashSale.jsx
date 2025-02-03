@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Glad from "../assets/Glad.jpeg";
 
 const FlashSale = () => {
   const [timeLeft, setTimeLeft] = useState({
+    days: 7,
     hours: 2,
     minutes: 41,
     seconds: 21,
@@ -11,7 +12,7 @@ const FlashSale = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => {
-        let { hours, minutes, seconds } = prevTime;
+        let { days, hours, minutes, seconds } = prevTime;
 
         if (seconds > 0) {
           seconds--;
@@ -22,11 +23,16 @@ const FlashSale = () => {
           seconds = 59;
           minutes = 59;
           hours--;
+        } else if (days > 0) {
+          seconds = 59;
+          minutes = 59;
+          hours = 23;
+          days--;
         } else {
           clearInterval(timer);
         }
 
-        return { hours, minutes, seconds };
+        return { days, hours, minutes, seconds };
       });
     }, 1000);
 
@@ -36,7 +42,6 @@ const FlashSale = () => {
   const formatTime = (time) => {
     return time.toString().padStart(2, "0");
   };
-
   const products = [
     {
       name: "Wig 1",
@@ -77,11 +82,20 @@ const FlashSale = () => {
     },
   ];
 
+
   return (
     <div className="bg-neutral-50 h-auto min-h-auto px-4 py-10">
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold text-[#4169E1]">FLASH SALE!</h1>
         <div className="flex items-center justify-center font-serif space-x-2">
+          {/* Days */}
+          <div className="flex flex-col items-center">
+            <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
+              {formatTime(timeLeft.days)}
+            </div>
+            <span className="text-xs mt-1">Days</span>
+          </div>
+          <span className="text-2xl font-bold">:</span>
           {/* Hours */}
           <div className="flex flex-col items-center">
             <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
@@ -106,9 +120,7 @@ const FlashSale = () => {
             <span className="text-xs mt-1">Seconds</span>
           </div>
         </div>
-      </div>
-
-      {/* Product List */}
+        {/* Product List */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product, index) => (
           <div
@@ -152,6 +164,7 @@ const FlashSale = () => {
         <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-6 rounded-lg shadow">
           View More
         </button>
+      </div>
       </div>
     </div>
   );

@@ -20,7 +20,6 @@ const ClassRegistrationForm = () => {
         Register for the Class
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        {/* Full Name */}
         <div>
           <label className="block text-gray-700 font-medium mb-2">
             Full Name <span className="text-red-500">*</span>
@@ -43,7 +42,6 @@ const ClassRegistrationForm = () => {
           <input
             type="email"
             {...register("email", {
-              required: "Email is required",
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 message: "Invalid email format",
@@ -95,7 +93,7 @@ const ClassRegistrationForm = () => {
         {/* Upload Receipt */}
         <div>
           <label className="block text-gray-700 font-medium mb-2">
-            Upload Receipt <span className="text-red-500">*</span>
+            Upload Payment Receipt <span className="text-red-500">*</span>
           </label>
           <input
             type="file"

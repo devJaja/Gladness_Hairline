@@ -37,7 +37,6 @@ const InstallationPage = () => {
         Wig Installation Services
       </h1>
 
-      {/* Preview Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         {installations.map((installation, index) => (
           <div

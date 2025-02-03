@@ -2,11 +2,11 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import NewArrivalBanner from './components/NewArrivalBanner'
-import Hairs from './components/Hairs'
-import FlashSale from './components/FlashSale'
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import NewArrivalBanner from './components/NewArrivalBanner';
+import Hairs from './components/Hairs';
+import FlashSale from './components/FlashSale';
 import Footer from './components/Footer';
 import InstallationPage from './pages/InstallationPage';
 import Home from './pages/Home';

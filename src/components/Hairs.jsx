@@ -1,4 +1,5 @@
-import Hair2 from "../assets/hair2.jpeg"
+import Hair2 from "../assets/hair2.jpeg";
+// import Glueless from "../assets/installation1.jpeg";
 const Hairs = () => {
   const items = [
     { name: "Bye Bye knots", image: "path-to-image1", tag: "HOT" },
@@ -14,10 +15,10 @@ const Hairs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-6 mt-8">
-      <div className="text-center text-2xl text-pink-600 font-bold mb-8">
+    <div className="h-auto min-h-auto bg-white p-6 mt-8 mb-4">
+      {/* <div className="text-center text-2xl text-pink-600 font-bold mb-8">
         Subscribe now!
-      </div>
+      </div> */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
         {items.map((item, index) => (
           <div

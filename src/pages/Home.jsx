@@ -4,6 +4,7 @@ import FlashSale from '../components/FlashSale';
 import InstallationPage from '../pages/InstallationPage';
 import CarouselBanner from '../components/CarouselBanner';
 import InstallationClass from '../components/Hair_installations page/InstallationClass';
+import ShopByTexture from '../components/ShopByTexture';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <FlashSale/>
       <InstallationPage/>
       <InstallationClass/>
+      <ShopByTexture/>
     </main>
   )
 }
