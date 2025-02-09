@@ -17,7 +17,7 @@ const ClassRegistrationForm = () => {
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-10">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        Register for the Class
+        Register for Class
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
@@ -37,7 +37,7 @@ const ClassRegistrationForm = () => {
         {/* Email Address */}
         <div>
           <label className="block text-gray-700 font-medium mb-2">
-            Email Address <span className="text-red-500">*</span>
+            Email Address (Optional)<span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -78,7 +78,7 @@ const ClassRegistrationForm = () => {
         {/* Preferred Date */}
         <div>
           <label className="block text-gray-700 font-medium mb-2">
-            Preferred Date <span className="text-red-500">*</span>
+            Date <span className="text-red-500">*</span>
           </label>
           <input
             type="date"
