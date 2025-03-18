@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import Glad from "../assets/Glad.jpeg";
+// import Glad from "../assets/Glad.jpeg";
+import Carts from "./Carts";
+import { useNavigate } from "react-router-dom";
 
 const FlashSale = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 7,
-    hours: 2,
+    hours: 12,
     minutes: 41,
     seconds: 21,
   });
@@ -42,92 +44,90 @@ const FlashSale = () => {
   const formatTime = (time) => {
     return time.toString().padStart(2, "0");
   };
-  const products = [
-    {
-      name: "Wig 1",
-      image: "path-to-image1",
-      originalPrice: "$199.82",
-      salePrice: "$139.87",
-      discount: "30%",
-      shipping: "Ship In 24 Hours",
-    },
-    {
-      name: "Wig 2",
-      image: "path-to-image2",
-      originalPrice: "$360.00",
-      salePrice: "$108.00",
-      discount: "70%",
-    },
-    {
-      name: "Wig 3",
-      image: "path-to-image3",
-      originalPrice: "$141.07",
-      salePrice: "$98.75",
-      discount: "30%",
-      shipping: "Ship In 24 Hours",
-    },
-    {
-      name: "Wig 4",
-      image: "path-to-image4",
-      originalPrice: "$360.00",
-      salePrice: "$108.00",
-      discount: "70%",
-    },
-    {
-      name: "Wig 5",
-      image: "path-to-image5",
-      originalPrice: "$201.07",
-      salePrice: "$140.75",
-      discount: "30%",
-    },
-  ];
+  // const products = [
+  //   {
+  //     name: "Wig 1",
+  //     image: "path-to-image1",
+  //     originalPrice: "$199.82",
+  //     salePrice: "$139.87",
+  //     discount: "30%",
+  //     shipping: "Ship In 24 Hours",
+  //   },
+  //   {
+  //     name: "Wig 2",
+  //     image: "path-to-image2",
+  //     originalPrice: "$360.00",
+  //     salePrice: "$108.00",
+  //     discount: "70%",
+  //   },
+  //   {
+  //     name: "Wig 3",
+  //     image: "path-to-image3",
+  //     originalPrice: "$141.07",
+  //     salePrice: "$98.75",
+  //     discount: "30%",
+  //     shipping: "Ship In 24 Hours",
+  //   },
+  //   {
+  //     name: "Wig 4",
+  //     image: "path-to-image4",
+  //     originalPrice: "$360.00",
+  //     salePrice: "$108.00",
+  //     discount: "70%",
+  //   },
+  //   {
+  //     name: "Wig 5",
+  //     image: "path-to-image5",
+  //     originalPrice: "$201.07",
+  //     salePrice: "$140.75",
+  //     discount: "30%",
+  //   },
+  // ];
 
+  const navigate = useNavigate();
 
   return (
-    <div className="bg-neutral-50 h-auto min-h-auto px-4 py-10">
-      <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-[#4169E1]">FLASH SALE!</h1>
-        <div className="flex items-center justify-center font-serif space-x-2">
-          {/* Days */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
-              {formatTime(timeLeft.days)}
-            </div>
-            <span className="text-xs mt-1">Days</span>
+    <div className="text-center bg-neutral-50 h-auto min-h-auto px-4 py-10 mb-6">
+      <h1 className="text-3xl font-bold text-[#4169E1]">FLASH SALE!</h1>
+      <div className="flex items-center justify-center font-serif space-x-2">
+        {/* Days */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 flex items-center justify-center bg-[#4169E1] text-white rounded-full text-2xl">
+            {formatTime(timeLeft.days)}
           </div>
-          <span className="text-2xl font-bold">:</span>
-          {/* Hours */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
-              {formatTime(timeLeft.hours)}
-            </div>
-            <span className="text-xs mt-1">Hours</span>
-          </div>
-          <span className="text-2xl font-bold">:</span>
-          {/* Minutes */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
-              {formatTime(timeLeft.minutes)}
-            </div>
-            <span className="text-xs mt-1">Minutes</span>
-          </div>
-          <span className="text-2xl font-bold">:</span>
-          {/* Seconds */}
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 flex items-center justify-center bg-black text-white rounded-full text-2xl">
-              {formatTime(timeLeft.seconds)}
-            </div>
-            <span className="text-xs mt-1">Seconds</span>
-          </div>
+          <span className="text-xs mt-1">Days</span>
         </div>
-        {/* Product List */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <span className="text-2xl font-bold">:</span>
+        {/* Hours */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 flex items-center justify-center bg-[#4169E1] text-white rounded-full text-2xl">
+            {formatTime(timeLeft.hours)}
+          </div>
+          <span className="text-xs mt-1">Hours</span>
+        </div>
+        <span className="text-2xl font-bold">:</span>
+        {/* Minutes */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 flex items-center justify-center bg-[#4169E1] text-white rounded-full text-2xl">
+            {formatTime(timeLeft.minutes)}
+          </div>
+          <span className="text-xs mt-1">Minutes</span>
+        </div>
+        <span className="text-2xl font-bold">:</span>
+        {/* Seconds */}
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 flex items-center justify-center bg-[#4169E1] text-white rounded-full text-2xl">
+            {formatTime(timeLeft.seconds)}
+          </div>
+          <span className="text-xs mt-1">Seconds</span>
+        </div>
+      </div>
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
         {products.map((product, index) => (
           <div
             key={index}
             className="relative bg-white border border-gray-200 rounded-lg shadow"
           >
-            {/* Product Image */}
             <div className="relative">
               <img
                 src={Glad}
@@ -146,7 +146,6 @@ const FlashSale = () => {
               )}
             </div>
 
-            {/* Product Info */}
             <div className="p-4 text-center">
               <div className="text-gray-700 font-semibold text-lg">
                 {product.salePrice}
@@ -157,14 +156,15 @@ const FlashSale = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* View More Button */}
+      </div> */}
+      <Carts />
       <div className="flex justify-center mt-6">
-        <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-6 rounded-lg shadow">
+        <button
+          className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-6 rounded-lg shadow"
+          onClick={() => navigate("/carts")}
+        >
           View More
         </button>
-      </div>
       </div>
     </div>
   );

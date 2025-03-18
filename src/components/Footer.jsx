@@ -1,76 +1,77 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PayPalLogo from "../assets/paypall.png";
-import VisaLogo from "../assets/visa.png";
-import MasterCardLogo from "../assets/mastercard.png";
+import { FaWhatsapp } from "react-icons/fa";
 import {
-    faFacebookF,
-    faPinterest,
-    faInstagram,
-    faYoutube,
-    faTwitter,
-    faTiktok,
-  } from "@fortawesome/free-brands-svg-icons";
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+  faTwitter,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 px-4">
+    <footer className="bg-black text-white py-12 px-6 md:px-16 lg:px-24">
       {/* Subscription Section */}
-      <div className="text-center mb-6">
-        <h2 className="text-lg font-semibold mb-2">
-          To Subscribe, You Will Receive The Latest Discounts.
+      <div className="text-center max-w-2xl mx-auto mb-10">
+        <h2 className="text-xl font-semibold mb-4">
+          Subscribe to Receive the Latest Discounts!
         </h2>
         <div className="flex justify-center items-center">
           <input
             type="email"
-            placeholder="Email Address"
-            className="w-72 p-2 rounded-l-lg text-gray-700"
+            placeholder="Enter your email"
+            className="w-80 p-3 rounded-l-lg text-gray-700 focus:outline-none"
           />
-          <button className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-r-lg">
+          <button className="bg-blue-500 hover:bg-blue-400 text-white px-6 py-3 rounded-r-lg text-lg">
             →
           </button>
         </div>
-        <p className="text-xs text-gray-400 mt-2">
-          By Clicking The Button, You Agree To Gladness Hairline{" "}
+        <p className="text-sm text-gray-400 mt-3 leading-relaxed">
+          By subscribing, you agree to Gladness Hairline’s{" "}
           <a href="#" className="underline">
             Privacy Policy
           </a>{" "}
-          And{" "}
+          and{" "}
           <a href="#" className="underline">
-            Terms Of Use
+            Terms of Use
           </a>
-          . <br /> You May Unsubscribe At Any Time. Reply HELP For Help Or STOP To Opt
-          Out.
+          . You may unsubscribe at any time.
         </p>
       </div>
 
       {/* Social Media Icons */}
-      <div className="flex justify-center space-x-4 mb-6">
-  <a href="https://www.facebook.com/share/19pKHBQXhp/?mibextid=wwXIfr" className="text-white">
-    <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
-  </a>
-  <a href="#" className="text-white">
-    <FontAwesomeIcon icon={faPinterest} className="text-2xl" />
-  </a>
-  <a href="#" className="text-white">
-    <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
-  </a>
-  <a href="#" className="text-white">
-    <FontAwesomeIcon icon={faYoutube} className="text-2xl" />
-  </a>
-  <a href="#" className="text-white">
-    <FontAwesomeIcon icon={faTwitter} className="text-2xl" />
-  </a>
-  <a href="#" className="text-white">
-    <FontAwesomeIcon icon={faTiktok} className="text-2xl" />
-  </a>
-</div>
+      <div className="flex justify-center gap-6 mb-8">
+        <a
+          href="https://www.facebook.com/share/19pKHBQXhp/?mibextid=wwXIfr"
+          className="text-white hover:text-blue-400"
+        >
+          <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
+        </a>
+        <a href="https://wa.me/message/R7Q6PQE3WCETP1" className="text-white">
+          <FaWhatsapp className="text-2xl text-green-500" />
+        </a>
+        <a
+          href="https://www.instagram.com/gladness_hairline_"
+          className="text-white hover:text-pink-400"
+        >
+          <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+        </a>
+        <a href="#" className="text-white hover:text-red-400">
+          <FontAwesomeIcon icon={faYoutube} className="text-2xl" />
+        </a>
+        <a href="#" className="text-white hover:text-blue-300">
+          <FontAwesomeIcon icon={faTwitter} className="text-2xl" />
+        </a>
+        <a href="#" className="text-white hover:text-gray-300">
+          <FontAwesomeIcon icon={faTiktok} className="text-2xl" />
+        </a>
+      </div>
 
-      {/* Footer Links */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 text-sm mb-6">
+      {/* Footer Links Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left max-w-5xl mx-auto mb-10">
         <div>
-          <h3 className="font-semibold mb-2">About Us</h3>
-          <ul>
+          <h3 className="font-semibold text-lg mb-3">About Us</h3>
+          <ul className="space-y-2">
             <li>
               <a href="#" className="hover:underline">
                 About Us
@@ -88,10 +89,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
         <div>
-          <h3 className="font-semibold mb-2">Customer Service</h3>
-          <ul>
+          <h3 className="font-semibold text-lg mb-3">Customer Service</h3>
+          <ul className="space-y-2">
             <li>
               <a href="#" className="hover:underline">
                 Shipment & Payment
@@ -112,59 +112,19 @@ const Footer = () => {
                 Blog
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Klarna
-              </a>
-            </li>
           </ul>
         </div>
-
         <div>
-          <h3 className="font-semibold mb-2">Coupon / Cash / Points</h3>
-          <ul>
-            <li>
-              <a href="#" className="hover:underline">
-                Coupon
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Cash
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Points
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-semibold mb-2">Contact Us</h3>
-          <ul>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact Info
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Wholesale
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-semibold mb-2">Customer Service</h3>
-          <ul>
+          <h3 className="font-semibold text-lg mb-3">Contact Us</h3>
+          <ul className="space-y-2">
             <li>+234 (070) 424-21322</li>
-            <li>Wholesale (earn money): +8615038958671</li>
-            <li>WhatsApp (save money): +2347042421322</li>
+            <li>Wholesale: +8615038958671</li>
+            <li>WhatsApp: +2347042421322</li>
             <li>
-              <a href="mailto:julia@juliahair.com" className="hover:underline">
+              <a
+                href="https://www.instagram.com/gladness_hairline_"
+                className="hover:underline"
+              >
                 @gladness_hairline.com
               </a>
             </li>
@@ -172,39 +132,26 @@ const Footer = () => {
         </div>
       </div>
 
-      
-      <div className="text-center">
+      {/* Payment Methods */}
+      <div className="text-center mb-6">
         <h3 className="text-lg font-bold mb-4">Payment Methods</h3>
-        <div className="flex justify-center items-center space-x-4">
-          <img
-            src={PayPalLogo}
-            alt="PayPal"
-            className="h-6 object-contain"
-          />
-          <img
-            src={VisaLogo}
-            alt="Visa"
-            className="h-6 object-contain"
-          />
-          <img
-            src={MasterCardLogo}
-            alt="MasterCard"
-            className="h-6 object-contain"
-          />
-          <div>
-            <p>Account no.: 7042421322</p>
-            <p>Name: Gladness Raymond</p>
-            <p>Opay</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto">
+          <div className="border p-4 rounded-lg bg-gray-800">
+            <p className="text-sm text-gray-300">Account No.: 7042421322</p>
+            <p className="text-sm text-gray-300">Name: Gladness Raymond</p>
+            <p className="font-semibold">Opay</p>
           </div>
-          <div>
-            <p>Account no.: 7042421322</p>
-            <p>Name: Gladness Raymond</p>
-            <p>GTbank</p>
+          <div className="border p-4 rounded-lg bg-gray-800">
+            <p className="text-sm text-gray-300">Account No.: 7042421322</p>
+            <p className="text-sm text-gray-300">Name: Gladness Raymond</p>
+            <p className="font-semibold">GTBank</p>
           </div>
         </div>
       </div>
-      <div className="text-center mt-4 text-sm text-gray-400">
-        ©2025 Glasness Hairline. All Rights Reserved
+
+      {/* Copyright */}
+      <div className="text-center text-sm text-gray-500 border-t border-gray-700 pt-4">
+        © 2025 Gladness Hairline. All Rights Reserved.
       </div>
     </footer>
   );

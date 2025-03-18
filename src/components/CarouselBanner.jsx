@@ -13,7 +13,10 @@ const slides = [
       <div className="relative bg-[#4169E1] text-white h-[550px] flex flex-col md:flex-row items-center overflow-hidden p-4">
         <div className="flex flex-col justify-center text-center md:text-left pl-4 md:pl-8 space-y-4 z-10">
           <h1 className="text-4xl md:text-7xl font-bold italic">
-            Welcome to <span className="block text-3xl md:text-5xl">GLADNESS HAIRLINE</span>
+            Welcome to{" "}
+            <span className="block text-3xl md:text-5xl">
+              GLADNESS HAIRLINE
+            </span>
           </h1>
           <p className="text-sm md:text-lg">Queen of affordable Hairs</p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium">
@@ -38,11 +41,18 @@ const slides = [
     content: (
       <div className="relative bg-[#4169E1] h-auto md:h-full flex flex-col md:flex-row items-center justify-between md:gap-4 p-4">
         <div className="bg-white w-[90%] md:w-[400px] rounded-lg shadow-lg p-2 md:p-6">
-          <img src={Training} alt="" className="h-full md:h-[300px] w-full object-cover rounded-md" />
+          <img
+            src={Training}
+            alt=""
+            className="h-full md:h-[300px] w-full object-cover rounded-md"
+          />
           <p className="text-gray-600 mt-2 md:mt-4 text-xs md:text-base">
-            Join our 1-Month intensive course and become a certified wig installation expert!
+            Join our 1-Month intensive course and become a certified wig
+            installation expert!
           </p>
-          <p className="text-orange-500 font-bold mt-2 md:mt-4 text-sm md:text-lg">Cost: $100</p>
+          <p className="text-orange-500 font-bold mt-2 md:mt-4 text-sm md:text-lg">
+            Cost: $100
+          </p>
           <Button />
         </div>
         <div className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 hidden md:block">
@@ -63,7 +73,9 @@ const slides = [
           <h1 className="text-4xl md:text-5xl text-white font-bold italic mb-2">
             <span className="text-6xl md:text-8xl">New</span> Arrival
           </h1>
-          <p className="text-white text-sm md:text-lg mb-4">Queen of Affordable Hairs</p>
+          <p className="text-white text-sm md:text-lg mb-4">
+            Queen of Affordable Hairs
+          </p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 md:px-6 rounded-full font-semibold text-xs md:text-base">
             Shop Now
           </button>

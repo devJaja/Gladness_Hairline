@@ -5,7 +5,7 @@ import Instl2 from "../assets/ceo_installation.jpeg";
 import Instl3 from "../assets/installation2.jpeg";
 const InstallationPage = () => {
   const navigate = useNavigate();
-  
+
   const handleClick = (title) => {
     navigate(`/booking-form?title=${title}`);
   };
@@ -53,13 +53,15 @@ const InstallationPage = () => {
             </h2>
             <p className="text-gray-600">{installation.duration}</p>
             <p className="text-green-500 font-semibold">{installation.price}</p>
-            <button className="bg-blue-500 text-white mt-4 py-2 px-4 rounded-lg hover:bg-blue-400" onClick={handleClick}>
+            <button
+              className="bg-blue-500 text-white mt-4 py-2 px-4 rounded-lg hover:bg-blue-400"
+              onClick={handleClick}
+            >
               Book Now
             </button>
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

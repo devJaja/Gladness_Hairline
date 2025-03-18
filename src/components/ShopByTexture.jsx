@@ -2,15 +2,18 @@ import Glad from "../assets/Glad.jpeg";
 import CeoInstallation from "../assets/V pad-wig.webp";
 import Hair1 from "../assets/hair1.jpeg";
 import Hair2 from "../assets/hair2.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const hairTextures = [
-  { name: "Straight Hair", image: Hair1 },
-  { name: "Wavy Hair", image: CeoInstallation },
-  { name: "Curly Hair", image: Glad },
-  { name: "Textured", image: Hair2 },
+  { name: "Straight Hair", image: Hair1, path: "/carts" },
+  { name: "Wavy Hair", image: CeoInstallation, path: "/hairs" },
+  { name: "Curly Hair", image: Glad, path: "/carts" },
+  { name: "Textured", image: Hair2, path: "/wig-collection" },
 ];
 
 const ShopByTexture = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative p-6 text-center">
       <h2 className="text-3xl font-semibold">
@@ -19,13 +22,17 @@ const ShopByTexture = () => {
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-6">
         {hairTextures.map((texture, index) => (
-          <div key={index} className="relative group overflow-hidden">
+          <div
+            key={index}
+            className="relative group overflow-hidden cursor-pointer"
+            onClick={() => texture.path && navigate(texture.path)}
+          >
             <img
               src={texture.image}
               alt={texture.name}
-              className="w-full h-auto object-cover rounded-lg transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+              className="w-full h-full object-cover rounded-lg transition-transform duration-300 ease-in-out transform group-hover:scale-110"
             />
-            <span className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg">
+            <span className="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg bg-black bg-opacity-40">
               {texture.name.toUpperCase()}
             </span>
           </div>

@@ -1,9 +1,7 @@
-
 const NewArrivalBanner = () => {
   return (
     <div className="relative bg-green-600 h-[450px] flex items-center justify-center">
       <div className="absolute inset-0">
-       
         {/* Right Tree */}
         <div className="absolute top-0 right-0 h-full w-[20%]">
           <img
@@ -16,7 +14,9 @@ const NewArrivalBanner = () => {
 
       {/* Content */}
       <div className="relative text-center">
-        <h1 className="text-5xl text-white font-bold italic mb-2">New Arrival</h1>
+        <h1 className="text-5xl text-white font-bold italic mb-2">
+          New Arrival
+        </h1>
         <p className="text-white text-lg mb-4">
           Color Your Xmas With New-In Wigs
         </p>

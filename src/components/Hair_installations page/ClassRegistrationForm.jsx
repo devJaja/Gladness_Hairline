@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
 const ClassRegistrationForm = () => {
   const {
@@ -10,7 +10,9 @@ const ClassRegistrationForm = () => {
 
   const onSubmit = (data) => {
     console.log("Form Data Submitted: ", data);
-    alert("Your registration for the Intensive Installation Class has been submitted!");
+    alert(
+      "Your registration for the Intensive Installation Class has been submitted!"
+    );
     reset();
   };
 
@@ -30,7 +32,9 @@ const ClassRegistrationForm = () => {
             className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
           />
           {errors.fullName && (
-            <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
+            <p className="text-red-500 text-sm mt-1">
+              {errors.fullName.message}
+            </p>
           )}
         </div>
 
@@ -82,11 +86,15 @@ const ClassRegistrationForm = () => {
           </label>
           <input
             type="date"
-            {...register("preferredDate", { required: "Preferred Date is required" })}
+            {...register("preferredDate", {
+              required: "Preferred Date is required",
+            })}
             className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
           />
           {errors.preferredDate && (
-            <p className="text-red-500 text-sm mt-1">{errors.preferredDate.message}</p>
+            <p className="text-red-500 text-sm mt-1">
+              {errors.preferredDate.message}
+            </p>
           )}
         </div>
 
@@ -101,7 +109,9 @@ const ClassRegistrationForm = () => {
             className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-orange-500"
           />
           {errors.receipt && (
-            <p className="text-red-500 text-sm mt-1">{errors.receipt.message}</p>
+            <p className="text-red-500 text-sm mt-1">
+              {errors.receipt.message}
+            </p>
           )}
         </div>
 
